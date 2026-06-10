@@ -1,0 +1,6 @@
+<resources>
+  <string name="app_name">ZyloHop</string>
+  <string name="expo_splash_screen_resize_mode" translatable="false">contain</string>
+  <string name="expo_splash_screen_status_bar_translucent" translatable="false">false</string>
+  <string name="google_maps_api_key" translatable="false">AIzaSyB-T2GimiJHK0Ndb9RV02CUgIoR4dMU7q0</string>
+</resources>

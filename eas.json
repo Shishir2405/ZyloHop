@@ -1,0 +1,53 @@
+{
+  "cli": {
+    "version": ">= 5.0.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "channel": "development",
+      "env": {
+        "GOOGLE_MAPS_API_KEY": "$GOOGLE_MAPS_API_KEY_DEV",
+        "STRIPE_PUBLISHABLE_KEY": "$STRIPE_PUBLISHABLE_KEY_DEV",
+        "SERVER_URL": "$SERVER_URL_DEV"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "channel": "preview",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "GOOGLE_MAPS_API_KEY": "$GOOGLE_MAPS_API_KEY_PREVIEW",
+        "STRIPE_PUBLISHABLE_KEY": "$STRIPE_PUBLISHABLE_KEY_PREVIEW",
+        "SERVER_URL": "$SERVER_URL_PREVIEW"
+      }
+    },
+    "production": {
+      "channel": "production",
+      "autoIncrement": true,
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "env": {
+        "GOOGLE_MAPS_API_KEY": "$GOOGLE_MAPS_API_KEY_PROD",
+        "STRIPE_PUBLISHABLE_KEY": "$STRIPE_PUBLISHABLE_KEY_PROD",
+        "SERVER_URL": "$SERVER_URL_PROD"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "$APPLE_ID",
+        "ascAppId": "$ASC_APP_ID"
+      },
+      "android": {
+        "serviceAccountKeyPath": "./play-store-credentials.json",
+        "track": "internal"
+      }
+    }
+  }
+}
